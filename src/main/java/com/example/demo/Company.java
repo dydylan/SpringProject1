@@ -2,21 +2,16 @@ package com.example.demo;
 
 public class Company {
 
-    private String address;
-    private int nbWindow;
-    private int nbDoor;
-    private String owner;
+    private String name;
+    private List<Developper> devs;
 
-    public Company(String address, int nbWindow, int nbDoor, String owner) {
-        this.address = address;
-        this.nbWindow = nbWindow;
-        this.nbDoor = nbDoor;
-        this.owner = owner;
+    public Company(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString(){
-        return "House{" + "address:" + address + ", nbWindow:" + nbWindow + ", nbDoor:" + nbDoor + ", owner:" + owner + "}";
+        return "Company{" + "name:" + name + "}";
     }
 
 }

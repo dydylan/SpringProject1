@@ -4,24 +4,24 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="houseBean" class="com.example.demo.House">
-        <constructor-arg value="Euratechnologies" type="java.lang.String"/>
-        <constructor-arg value="30" type="int"/>
-        <constructor-arg type="int"> <value>14</value></constructor-arg>
-        <constructor-arg value="Myrthille" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="Myrthille" type="java.lang.String" index="3"></constructor-arg>
+        <constructor-arg value="30" index="1" type="int"/>
+        <constructor-arg value="Euratechnologies, Lille 59000" type="java.lang.String" index="0"/>
+        <constructor-arg type="int" index="2"> <value>14</value></constructor-arg>
     </bean>
 
-    <bean id="devBean" class="com.example.demo.Developper">
-        <constructor-arg value="Euratechnologies" type="java.lang.String"/>
-        <constructor-arg value="30" type="int"/>
-        <constructor-arg type="int"> <value>14</value></constructor-arg>
-        <constructor-arg value="Myrthille" type="java.lang.String"></constructor-arg>
+    <bean id="devBean1" class="com.example.demo.Developer">
+        <constructor-arg value="Bastien" type="java.lang.String"/>
+        <constructor-arg value="10" type="int"/>
+    </bean>
+
+    <bean id="devBean2" class="com.example.demo.Developer">
+        <constructor-arg value="Manuel" type="java.lang.String"/>
+        <constructor-arg value="10" type="int"/>
     </bean>
 
     <bean id="companyBean" class="com.example.demo.Company">
-        <constructor-arg value="Euratechnologies" type="java.lang.String"/>
-        <constructor-arg value="30" type="int"/>
-        <constructor-arg type="int"> <value>14</value></constructor-arg>
-        <constructor-arg value="Myrthille" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="Harmonie mutuelle" type="java.lang.String"/>
     </bean>
 
 </beans>

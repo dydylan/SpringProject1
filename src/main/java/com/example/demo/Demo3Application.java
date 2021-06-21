@@ -16,11 +16,13 @@ public class Demo3Application implements CommandLineRunner {
         ApplicationContext cxt =
                 new ClassPathXmlApplicationContext("spring-beans.xml");
         House house = (House) cxt.getBean("houseBean");
-        Developper developper = (Developper) cxt.getBean("devBean");
+        Developer developer1 = (Developer) cxt.getBean("devBean1");
+        Developer developer2 = (Developer) cxt.getBean("devBean2");
         Company company = (Company) cxt.getBean("companyBean");
 
         System.out.println(house.toString());
-        System.out.println(developper.toString());
+        System.out.println(developer1.toString());
+        System.out.println(developer2.toString());
         System.out.println(company.toString());
     }
 }
