@@ -24,4 +24,22 @@
         <constructor-arg value="Harmonie mutuelle" type="java.lang.String"/>
     </bean>
 
+    <bean id="serviceBean" class="com.example.demo.Service" scope="singleton">
+        <constructor-arg value="I am a service" type="java.lang.String"/>
+    </bean>
+
+    <bean id="kungFuBean" class="com.example.demo.KungFu">
+        <constructor-arg value="strong punch" type="java.lang.String"/>
+    </bean>
+
+    <bean id="pandaBean" class="com.example.demo.Panda" autowire="constructor">
+        <constructor-arg value="great panda" type="java.lang.String"/>
+    </bean>
+
+    <bean id="personBean" class="com.example.demo.Person" autowire="constructor">
+        <constructor-arg value="Jean" type="java.lang.String"/>
+        <constructor-arg value="Dupont" type="java.lang.String"/>
+        <constructor-arg value="adressemail@gmail.com" type="java.lang.String"/>
+    </bean>
+
 </beans>

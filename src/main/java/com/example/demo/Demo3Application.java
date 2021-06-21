@@ -13,8 +13,7 @@ public class Demo3Application implements CommandLineRunner {
 
     @Override
     public void run(String ... args) throws Exception {
-        ApplicationContext cxt =
-                new ClassPathXmlApplicationContext("spring-beans.xml");
+        ApplicationContext cxt = new ClassPathXmlApplicationContext("spring-beans.xml");
         House house = (House) cxt.getBean("houseBean");
         Developer developer1 = (Developer) cxt.getBean("devBean1");
         Developer developer2 = (Developer) cxt.getBean("devBean2");
@@ -24,5 +23,11 @@ public class Demo3Application implements CommandLineRunner {
         System.out.println(developer1.toString());
         System.out.println(developer2.toString());
         System.out.println(company.toString());
+
+        KungFu kf = (KungFu) cxt.getBean("kungFuBean");
+        System.out.println(kf.toString());
+
+        Panda panda = (Panda) cxt.getBean("pandaBean");
+        System.out.println(panda.toString());
     }
 }
