@@ -29,5 +29,6 @@ public class Demo3Application implements CommandLineRunner {
 
         Panda panda = (Panda) cxt.getBean("pandaBean");
         System.out.println(panda.toString());
+
     }
 }
